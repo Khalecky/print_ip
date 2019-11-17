@@ -5,6 +5,9 @@ addons:
   apt:
     packages:
     - libboost-test-dev
+
+install:
+- sudo install doxygen
 script:
 - doxygen Doxyfile
 - cmake .
