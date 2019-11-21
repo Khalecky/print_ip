@@ -10,7 +10,6 @@ install:
 - sudo apt-get install doxygen
 - sudo apt-get install graphviz
 script:
-- mkdir docs
 - doxygen Doxyfile
 - cmake .
 - cmake --build .
@@ -24,6 +23,6 @@ deploy:
    skip_cleanup: true
    github_token: $GITHUB_TOKEN
    keep_history: true
-   local_dir: docs/
+   local_dir: html/
    on:
     branch: master
